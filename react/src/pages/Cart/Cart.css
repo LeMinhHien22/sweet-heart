@@ -1,0 +1,80 @@
+.img-fluids {
+  max-width: 100%;
+  height: 100px;
+}
+
+.count{
+  background-color:#fff;
+width: 3rem;
+height:1.9rem;
+text-align:center;
+font-size:1rem;
+display:inline-block;
+vertical-align:top;
+margin:0;
+border-top:1px solid #ddd;
+border-bottom:1px solid #ddd;
+border-left:4px;
+border-right:0;
+padding:0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+h1.title span {
+  background: #ffffff none repeat scroll 0 0;
+  color:#d63e39;
+  display: inline-block;
+  font-size: 18px;
+  position: relative;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.quality{
+  position: relative;
+  left: 16px;
+}
+
+.PriceTotal{
+  position: relative;
+  left: 30px;
+}
+
+.Pro_price{
+  position: relative;
+  left: 20px;
+}
+
+.item td{
+  vertical-align: middle;
+}
+.ContainerCart{
+  margin: 5px 40px 0px 40px;
+}
+
+.btn-primarys {
+  color: rgb(255, 255, 255);
+  background-color: #ff5100;
+  border-color: #ff5100;
+}
+
+.btns {
+  display: inline-block;
+  font-weight: 400;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  user-select: none;
+  background-color: #ff5100; 
+  border: 1px solid #ff5100;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
