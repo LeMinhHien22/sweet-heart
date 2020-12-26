@@ -1,21 +1,23 @@
-
-import React from 'react';
+import React from 'react'
 import { getProductImageUrl, removeCartItem, getAllProductsAsync, setCartItemQuantity, getCartItems } from '../../lib/backendService';
+import "../Cart/Cart.css";
 
 import { useEffect, useState } from 'react';
+export default function Item(iterm) {
 
-
-export default function CartItem({items}) {
-
-    const [checked, setChecked] = useState(false);
+    /*const [checked, setChecked] = useState(false);
     const changeCheckBox = e => {
         setChecked(!checked);
     }
-    
-    return items.map((item) => (
+
+
+
+    return (
         <tr className="item">
+
             <td>
                 <div className="cart-item__cell-checkbox">
+
                     <label className="container">
                         <input type="checkbox" checked={checked} onChange={changeCheckBox} />
                         <span className="checkmark"></span>
@@ -24,21 +26,21 @@ export default function CartItem({items}) {
             </td>
             <td>
                 <h5>
-                    <strong>{item.name}</strong>
+                    <strong>{iterm.name}</strong>
                 </h5>
             </td>
             <td scope="row">
-                <img className="img-fluids z-depth-0" src={getProductImageUrl(item.img)}
+                <img className="img-fluids z-depth-0" src={getProductImageUrl(iterm.img)}
                     alt="hình" />
             </td>
             <td>
-                {(Number(item.price) % 1 === 0.5) ?
+                {(Number(iterm.price)  % 1 === 0.5) ?
                     (<span className="price">
-                        {Number(item.price)}00
+                        {Number(iterm.price)}00
                         <span className="sub-price">₫</span>
                     </span>) :
                     <span className="price">
-                        {Number(item.price) }.000
+                        {Number(iterm.price)}.000
                 <span className="sub-price">₫</span>
                     </span>
                 }
@@ -46,45 +48,53 @@ export default function CartItem({items}) {
             <td className="center-on-small-only">
                 <div className="btn-group radio-group" data-toggle="buttons">
                     <label
-                        /*onClick={}*/
+                        /*onClick={}
                         className="btns btn-sm "
                     >
                         <a>-</a>
                     </label>
-                    <input aria-label="quantity" className="qty count" type="number" 
-                    value="1"></input>
+                    <input aria-label="quantity" className="qty count" type="number" onChange={e => {
+                        setCartItemQuantity(iterm, e.target.value)
+
+                    }} value={iterm.quantity}></input>
                     <label
-                        /*onClick={"1"}*/
+                        /*onClick={"1"}
                         className="btns btn-sm "
                     >
                         <a>+</a>
                     </label>
                 </div>
             </td>
-            <td><span className="PriceTotal">
-                {(Number(item.price) * Number(item.quantity) % 1 === 0.5) ?
+            <td>
+                {(Number(iterm.price) * Number(iterm.quantity) % 1 === 0.5) ?
                     (<span className="price">
-                        {Number(item.price) * Number(item.quantity)}00
+                        {Number(iterm.price) * Number(iterm.quantity)}00
                         <span className="sub-price">₫</span>
                     </span>) :
                     <span className="price">
-                        {Number(item.price) * Number(item.quantity)}.000
+                        {Number(iterm.price) * Number(iterm.quantity)}.000
                 <span className="sub-price">₫</span>
                     </span>
                 }
-            </span></td>
+            </td>
             <td>
                 <button
                     type="button"
                     className="btns btn-sm "
                     onClick={() => {
-                        removeCartItem(item)
+                        removeCartItem(iterm)
                     }}
                 >
                     X
-                  </button>
-   
+                    </button>
+
+                <button type="button" onClick={() => {
+                    setCartItemQuantity(iterm, 7);
+                    console.log(iterm);
+                }}>Test
+                    </button>
             </td>
         </tr>
-    ));
+    )
 }
+*/}
